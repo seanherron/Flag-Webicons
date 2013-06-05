@@ -1,0 +1,24 @@
+# Numerous always-ignore extensions
+*.ai
+*.zip
+*.psd
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# OS or Editor folders
+.DS_Store
+.l]_]tore
+Thumbs.db
+*.esproj
+
+# Folders to ignore
+.idea
+.master
