@@ -1,0 +1,24 @@
+/* Flag Webicons by Sean Herron http://seanherron.com */
+/* Inspired by FC Webicons by Fairhead Creative http://fairheadcreative.com */
+
+.flag-webicon { display: inline-block; background-size: contain !important; background-repeat:no-repeat !important; background-position:center !important; width: 64px; height: 64px; text-indent: -9999em; text-align: left; }
+.flag-webicon.xsmall { width: 16px; height: 16px; }
+.flag-webicon.small { width: 32px; height: 32px; }
+.flag-webicon.large { width: 128px; height: 128px; }
+.flag-webicon.xlarge { width: 256px; height: 256px; }
+
+
+// Include or remove the icons you want to use on your site from this list.
+$flag-webicons-icons: afghanistan albania algeria andorra angola antigua-and-barbuda argentina armenia australia austria azerbaijan bahamas bahrain bangladesh barbados belarus belgium belize benin bhutan bolivia bosnia-and-herzegovina botswana brazil brunei bulgaria burkina-faso burundi cambodia cameroon canada cape-verde central-african-republic chad chile colombia comoros costa-rica croatia cuba cyprus czech-republic cote-divoire democratic-republic-of-the-congo denmark djibouti dominica dominican-republic east-timor ecuador egypt el-salvador equatorial-guinea eritrea estonia ethiopia federated-states-of-micronesia fiji finland france gabon gambia georgia germany ghana greece grenada guatemala guinea-bissau guinea guyana haiti honduras hungary iceland india indonesia iran iraq ireland israel italy jamaica japan jordan kazakhstan kenya kiribati kuwait kyrgyzstan laos latvia lebanon lesotho liberia libya liechtenstein lithuania luxembourg macedonia madagascar malawi malaysia maldives mali malta marshall-islands mauritania mauritius mexico moldova monaco mongolia montenegro morocco mozambique myanmar namibia nauru nepal netherlands new-zealand nicaragua niger nigeria north-korea norway oman pakistan palau palestine panama papua-new-guinea paraguay peoples-republic-of-china peru philippines poland portugal qatar republic-of-china republic-of-the-congo romania russia rwanda saint-kitts-and-nevis saint-lucia saint-vincent-and-the-grenadines samoa san-marino sao-tome-and-principe saudi-arabia senegal serbia seychelles sierra-leone singapore slovakia slovenia solomon-islands somalia south-africa south-korea south-sudan spain sri-lanka sudan suriname swaziland sweden switzerland syria tajikistan tanzania thailand togo tonga trinidad-and-tobago tunisia turkey turkmenistan tuvalu uganda ukraine united-arab-emirates united-kingdom united-states uruguay uzbekistan vanuatu vatican-city venezuela vietnam yemen zambia zimbabwe;
+
+// Specify the path to the webicons directory here. Include trailing slash.
+$flag-webicons-url: "flags/" !default;
+
+@each $flag-webicons-icon in $flag-webicons-icons {
+  .no-svg .flag-webicon.#{flag-webicons-icon}        {background: url("#{flag-webicons-url}#{flag-webicons-icon}.png");}
+  .no-svg .flag-webicon.#{flag-webicons-icon}.xsmall {background: url("#{flag-webicons-url}#{flag-webicons-icon}-xs.png");}
+  .no-svg .flag-webicon.#{flag-webicons-icon}.small  {background: url("#{flag-webicons-url}#{flag-webicons-icon}-s.png");}
+  .no-svg .flag-webicon.#{flag-webicons-icon}.large  {background: url("#{flag-webicons-url}#{flag-webicons-icon}-l.png");}
+  .no-svg .flag-webicon.#{flag-webicons-icon}.xlarge {background: url("#{flag-webicons-url}#{flag-webicons-icon}-xl.png");}
+  .svg    .flag-webicon.#{flag-webicons-icon}        {background: url("#{flag-webicons-url}#{flag-webicons-icon}.svg");}
+}
