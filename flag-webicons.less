@@ -14,7 +14,7 @@
 // Specify the path to the webicons directory here. Include trailing slash.
 @flag-webicons-url: "flags/";
 
-.loop-strings(@list, @index: 1) when (isstring(extract(@list, @index))) {
+.flag-webicons-loop(@list, @index: 1) when (isstring(extract(@list, @index))) {
   @flag-webicons-icon: extract(@list, @index);
 
   .no-svg .flag-webicon.@{flag-webicons-icon}        {background: url("@{flag-webicons-url}@{flag-webicons-icon}.png");}
@@ -24,6 +24,6 @@
   .no-svg .flag-webicon.@{flag-webicons-icon}.xlarge {background: url("@{flag-webicons-url}@{flag-webicons-icon}-xl.png");}
   .svg    .flag-webicon.@{flag-webicons-icon}        {background: url("@{flag-webicons-url}@{flag-webicons-icon}.svg");}
 
-  .loop-strings(@list, (@index + 1));
+  .flag-webicons-loop(@list, (@index + 1));
 }
-.loop-strings(@flag-webicons-icons);
+.flag-webicons-loop(@flag-webicons-icons);
