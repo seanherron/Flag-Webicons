@@ -14,7 +14,8 @@ Usage
 =================
 
 1. Include flag-webicons.css in your HTML
-2. Use the following code to include a flag:
+2. Include at least [this](http://modernizr.com/download/#-svg-cssclasses) Modernizr build to add the `svg` or `no-svg` classes that are required.
+3. Use the following code to include a flag:
 
 ```html
 <a class="flag-webicon senegal" href="http://www.gouv.sn/">République du Sénégal</a>
